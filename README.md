@@ -15,6 +15,7 @@ Dalam proyek ini, peneliti ingin mengembangkan model machine learning yang dapat
 Referensi terkait:
 
 "Car Price Prediction Using Machine Learning" oleh Kumar & Gupta (2020)
+
 "A Comparative Analysis of Machine Learning Models for Used Car Price Prediction" oleh Smith et al. (2021)
 
 ---
