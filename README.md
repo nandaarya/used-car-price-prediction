@@ -204,6 +204,9 @@ Langkah-langkah yang dilakukan dalam data preparation untuk prediksi harga mobil
    Alasan:
    - Menghapus fitur yang tidak signifikan terhadap target variabel dapat mengurangi kompleksitas model.
    - Fitur dengan korelasi lemah tidak memberikan kontribusi yang berarti dalam prediksi harga.
+   
+   Struktur dataset terbaru:
+   ![image](https://github.com/user-attachments/assets/7009362c-3b00-4bdf-bf02-79b00e210cbc)
 
 2. Menangani Missing Values dan Outliers
    
@@ -213,8 +216,17 @@ Langkah-langkah yang dilakukan dalam data preparation untuk prediksi harga mobil
    Alasan:
    - Outliers dapat menyebabkan model overfitting atau memberikan prediksi yang tidak akurat.
    - Metode IQR lebih robust terhadap distribusi data dibandingkan metode statistik lainnya.
+  
+   Cek Missing Values:
+   ![image](https://github.com/user-attachments/assets/6eac1227-ab75-4fbb-b910-b7c19017a762)
+
+   Dataset awal:
+   ![image](https://github.com/user-attachments/assets/07234aac-3f6f-416a-818b-3404f63e1db9)
+
+   Dataset setelah dilakukan metode IQR:
+   ![image](https://github.com/user-attachments/assets/5591259b-15e2-4bfa-bdff-c0f565f2ee69)
      
-3. Encoding untuk Fitur Kategorikal
+4. Encoding untuk Fitur Kategorikal
    
    Teknik yang digunakan: One-Hot Encoding & Frequency Encoding
    Fitur brand, transmission, dan fuelType diencoding menggunakan One-Hot Encoding karena jumlah kategorinya tidak terlalu banyak. Sementara itu, fitur model diencoding menggunakan Frequency Encoding karena memiliki terlalu banyak kategori untuk One-Hot Encoding.
@@ -224,7 +236,7 @@ Langkah-langkah yang dilakukan dalam data preparation untuk prediksi harga mobil
    - Frequency Encoding lebih efisien untuk variabel dengan kategori yang sangat banyak, menghindari curse of dimensionality.
    - Untuk konversi data kategorikal ke data numerik agar dapat di proses model machine learning
      
-4. Reduksi Dimensi dengan PCA
+5. Reduksi Dimensi dengan PCA
    
    Teknik yang digunakan: Principal Component Analysis (PCA)
    Fitur mileage dan year memiliki korelasi tinggi, sehingga dilakukan reduksi dimensi menggunakan PCA dengan menggabungkan kedua fitur tersebut.
@@ -234,16 +246,16 @@ Langkah-langkah yang dilakukan dalam data preparation untuk prediksi harga mobil
    - Menghindari multikolinearitas, yang dapat menyebabkan model menjadi kurang stabil.
    - Mengurangi fitur untuk meringankan komputasi tanpa menghilangkan informasi.
      
-5. Pembagian Data (Train-Test Split)
+6. Pembagian Data (Train-Test Split)
    
-   Data dibagi menjadi 90% data training dan 10% data testing untuk memastikan model dapat dievaluasi dengan baik menggunakan data yang tidak terlihat sebelumnya.
+   Data dibagi menjadi 90% data training dan 10% data testing untuk memastikan model dapat dievaluasi dengan baik menggunakan data yang tidak terlihat sebelumnya. Jumlah data latih: 89451. Jumlah data uji: 9940.
 
    Alasan:
    - Memisahkan data untuk mengevaluasi performa model dengan data baru.
    - Memastikan model tidak overfitting dengan hanya belajar dari data training.
    - Data dibagi dengan perbandingan 90:10 karena dataset berukuran besar (100.000).
 
-6. Standarisasi Fitur Numerik
+7. Standarisasi Fitur Numerik
    
    Teknik yang digunakan: StandardScaler (Standarisasi Data)
    Fitur numerik diskalakan menggunakan StandardScaler agar memiliki distribusi normal dengan mean 0 dan standar deviasi 1.
