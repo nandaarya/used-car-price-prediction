@@ -50,11 +50,11 @@ Menganalisis data menggunakan univariate dan multivariate analysis untuk menemuk
 Melakukan data cleaning, termasuk penanganan missing values, encoding fitur kategorikal, serta normalisasi data numerik agar model dapat memahami informasi dengan lebih baik.
 2. Pemilihan Algoritma dan Optimasi Model
 - Menggunakan berbagai algoritma machine learning, seperti:
--- Random Forest
--- Gradient Boosting
--- XGBoost
--- K-Nearest Neighbors (KNN)
--- LightGBM
+  - Random Forest
+  - Gradient Boosting
+  - XGBoost
+  - K-Nearest Neighbors (KNN)
+  - LightGBM
 - Melakukan hyperparameter tuning dengan Grid Search atau Random Search untuk mendapatkan hasil terbaik.
 3. Evaluasi Model dengan Metrik yang Tepat
 Model akan dievaluasi berdasarkan beberapa metrik utama, yaitu:
