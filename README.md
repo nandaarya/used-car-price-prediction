@@ -197,6 +197,7 @@ Sebelum membangun model machine learning, diperlukan tahapan data preparation un
 
 Langkah-langkah yang dilakukan dalam data preparation untuk prediksi harga mobil bekas adalah sebagai berikut:
 1. Menghapus Fitur yang Memiliki Korelasi Lemah terhadap Harga
+   
    Teknik yang digunakan: Feature Selection
    Fitur tax dan mpg dihapus dari dataset karena memiliki korelasi yang lemah terhadap harga (price) berdasarkan analisis korelasi sebelumnya.
 
@@ -205,6 +206,7 @@ Langkah-langkah yang dilakukan dalam data preparation untuk prediksi harga mobil
    - Fitur dengan korelasi lemah tidak memberikan kontribusi yang berarti dalam prediksi harga.
 
 2. Menangani Missing Values dan Outliers
+   
    Teknik yang digunakan: Metode IQR
    Dataset tidak memiliki missing values, sehingga tidak diperlukan imputasi. Namun, outliers dalam variabel harga diatasi menggunakan metode Interquartile Range (IQR) untuk mendeteksi dan menghapus data dengan nilai ekstrem.
 
@@ -213,6 +215,7 @@ Langkah-langkah yang dilakukan dalam data preparation untuk prediksi harga mobil
    - Metode IQR lebih robust terhadap distribusi data dibandingkan metode statistik lainnya.
      
 3. Encoding untuk Fitur Kategorikal
+   
    Teknik yang digunakan: One-Hot Encoding & Frequency Encoding
    Fitur brand, transmission, dan fuelType diencoding menggunakan One-Hot Encoding karena jumlah kategorinya tidak terlalu banyak. Sementara itu, fitur model diencoding menggunakan Frequency Encoding karena memiliki terlalu banyak kategori untuk One-Hot Encoding.
 
@@ -222,6 +225,7 @@ Langkah-langkah yang dilakukan dalam data preparation untuk prediksi harga mobil
    - Untuk konversi data kategorikal ke data numerik agar dapat di proses model machine learning
      
 4. Reduksi Dimensi dengan PCA
+   
    Teknik yang digunakan: Principal Component Analysis (PCA)
    Fitur mileage dan year memiliki korelasi tinggi, sehingga dilakukan reduksi dimensi menggunakan PCA dengan menggabungkan kedua fitur tersebut.
 
@@ -231,6 +235,7 @@ Langkah-langkah yang dilakukan dalam data preparation untuk prediksi harga mobil
    - Mengurangi fitur untuk meringankan komputasi tanpa menghilangkan informasi.
      
 5. Pembagian Data (Train-Test Split)
+   
    Data dibagi menjadi 90% data training dan 10% data testing untuk memastikan model dapat dievaluasi dengan baik menggunakan data yang tidak terlihat sebelumnya.
 
    Alasan:
@@ -239,6 +244,7 @@ Langkah-langkah yang dilakukan dalam data preparation untuk prediksi harga mobil
    - Data dibagi dengan perbandingan 90:10 karena dataset berukuran besar (100.000).
 
 6. Standarisasi Fitur Numerik
+   
    Teknik yang digunakan: StandardScaler (Standarisasi Data)
    Fitur numerik diskalakan menggunakan StandardScaler agar memiliki distribusi normal dengan mean 0 dan standar deviasi 1.
 
