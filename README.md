@@ -132,10 +132,30 @@ Dataset dapat diakses dan diunduh melalui tautan berikut:
 
 2. Fitur Numerik
 ![image](https://github.com/user-attachments/assets/f4a565d8-c83e-40b5-9d30-e46d36922888)
-Dari gambar diatas, kita dapat mengamati bagian fitur price yang merupakan target pada data kita. Dari histogram price, kita bisa memperoleh beberapa informasi, antara lain:
-- Peningkatan harga diamonds sebanding dengan penurunan jumlah sampel. Hal ini dapat kita lihat jelas dari histogram "price" yang grafiknya mengalami penurunan seiring dengan semakin banyaknya jumlah sampel.
-- Rentang harga mobil bekas cukup tinggi yaitu dari skala ratusan Pound Sterling (£) hingga sekitar £60.000.
-- Setengah harga berlian bernilai di bawah £20.000.
-- Distribusi harga miring ke kanan (right-skewed). Hal ini akan berimplikasi pada model.
+  - Price
+    - Peningkatan harga mobil bekas sebanding dengan penurunan jumlah sampel.
+    - Rentang harga mobil bekas cukup tinggi yaitu dari skala ratusan Pound Sterling (£) hingga sekitar £60.000.
+    - Setengah harga berlian bernilai di bawah £20.000.
+    - Distribusi harga miring ke kanan.
+      
+  - Year
+    - Peningkatan tahun keluaran mobil sebanding dengan peningkatan jumlah sampel.
+    - Tahun keluaran mobil bekas terbaru adalah 2020.
+    - Distribusi year miring ke kiri.
+      
+  - Mileage (Jarak Tempuh)
+    - Peningkatan jarak tempuh mobil bekas sebanding dengan penurunan jumlah sampel.
+    - Distribusi mileage miring ke kanan.
+      
+  - Engine Size
+    - Tidak ada pola dalam distribusi.
+    - Engine size dengan sampel terbanyak adalah 2.
+      
+  - Tax
+    - Tidak ada pola dalam distribusi.
+    - Tax dengan sampel terbanyak adalah 140.
+      
+  - Mpg
+    - mpg memiliki distribusi yang terpusat di 50.
 
 #### Multivariate Analysis
