@@ -1,4 +1,4 @@
-![image](https://github.com/user-attachments/assets/c502585f-158f-49aa-b01f-8164298c08b0)# Laporan Predictive Analytics: Model Machine Learning untuk Prediksi Harga Mobil Bekas
+# Laporan Predictive Analytics: Model Machine Learning untuk Prediksi Harga Mobil Bekas
 
 Untuk memenuhi submission pertama Predictive Analytic kelas Machine Learning Terapan - Dicoding Academy
 
