@@ -270,6 +270,7 @@ Setelah tahap data preparation, langkah berikutnya adalah membangun model machin
 Agar setiap model dapat bekerja secara optimal, dilakukan hyperparameter tuning menggunakan GridSearchCV untuk menemukan kombinasi parameter terbaik yang menghasilkan performa terbaik pada data validasi.
 
 1. Random Forest
+   
    Random Forest adalah algoritma berbasis ensemble yang menggabungkan banyak pohon keputusan untuk meningkatkan akurasi prediksi dan mengurangi overfitting.
 
    - Parameter yang digunakan:
@@ -288,6 +289,7 @@ Agar setiap model dapat bekerja secara optimal, dilakukan hyperparameter tuning 
      - Tidak sebaik model boosting dalam menangkap pola kompleks pada dataset besar.
        
 2. Gradient Boosting
+   
    Gradient Boosting adalah metode boosting yang secara bertahap membangun model berdasarkan kesalahan dari model sebelumnya.
 
    - Parameter yang digunakan:
@@ -305,6 +307,7 @@ Agar setiap model dapat bekerja secara optimal, dilakukan hyperparameter tuning 
      - Memerlukan tuning parameter yang lebih kompleks.
        
 3. XGBoost
+   
    XGBoost adalah versi yang lebih efisien dari Gradient Boosting, yang dirancang untuk memberikan performa lebih cepat dengan optimasi berbasis GPU.
 
    - Parameter yang digunakan:
@@ -322,6 +325,7 @@ Agar setiap model dapat bekerja secara optimal, dilakukan hyperparameter tuning 
      - Bisa lebih kompleks dalam interpretasi dibandingkan model lainnya.
        
 4. K-Nearest Neighbors (KNN)
+   
    KNN adalah model berbasis instance learning yang menentukan prediksi berdasarkan rata-rata nilai dari tetangga terdekatnya.
 
    - Parameter yang digunakan:
@@ -338,6 +342,7 @@ Agar setiap model dapat bekerja secara optimal, dilakukan hyperparameter tuning 
      - Rentan terhadap noise dan outliers dalam data.
        
 5. LightGBM
+   
    LightGBM adalah algoritma boosting berbasis pohon yang lebih ringan dan cepat dibandingkan XGBoost, dengan teknik pembelajaran berbasis histogram.
 
    - Parameter yang digunakan:
@@ -375,6 +380,8 @@ Hasil GridSearch
 | Random Forest    | 1627.05  |
 | KNN              | 1672.47  |
 
-Berdasarkan hasil GridSearch, model XGBoost memiliki MAE terendah (1582.60), diikuti oleh LightGBM (1584.17) dan Gradient Boosting (1584.47). Model dengan MAE tertinggi adalah KNN (1672.47), yang berarti model ini memiliki performa paling buruk dibandingkan model lainnya. XGBoost adalah model terbaik karena memiliki MAE terendah, yang berarti mampu menghasilkan prediksi harga mobil bekas dengan error paling kecil.
+Berdasarkan hasil GridSearch, model XGBoost memiliki MAE terendah (1582.60), diikuti oleh LightGBM (1584.17) dan Gradient Boosting (1584.47). Model dengan MAE tertinggi adalah KNN (1672.47), yang berarti model ini memiliki performa paling buruk dibandingkan model lainnya. 
+
+XGBoost adalah model terbaik karena memiliki MAE terendah, yang berarti mampu menghasilkan prediksi harga mobil bekas dengan error paling kecil.
 
 ## Evaluation
