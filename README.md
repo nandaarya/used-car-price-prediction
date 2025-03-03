@@ -182,4 +182,16 @@ Dataset dapat diakses dan diunduh melalui tautan berikut:
   
 2. Fitur Numerik
 ![image](https://github.com/user-attachments/assets/92af1a13-f5fd-4920-a3ba-a726e4e2eec6)
+Dari grafik pairplot diatas, kita dapat fokus pada sumbu "price" dimana merupakan fitur target kita dan dapat menyimpulkan bahwa:
+  - Fitur year memiliki korelasi positif dengan fitur price.
+  - Fitur mileage memiliki korelasi negatif dengan fitur price.
+  - Fitur engine size, tax, dan mpg tidak memiliki korelasi yang kuat dengan fitur price karena memiliki pola yang cukup acak.
 
+![image](https://github.com/user-attachments/assets/6f11e5be-2403-4ba5-b2a1-680bbfe51ff5)
+Untuk lebih jelasnya, kita dapat mengamati grafik korelasi diatas yang menunjukkan nilai korelasi fitur price dengan fitur numerik lainnya. Dapat disimpulkan bahwa:
+  - fitur year, mileage, dan engine size memiliki korelasi yang cukup kuat dengan fitur price.
+  - fitur tax dan mpg memiliki korelasi dengan fitur price, tetapi tidak cukup kuat.
+
+## Data Preparation
+## Modeling
+## Evaluation
