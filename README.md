@@ -111,7 +111,7 @@ Dataset dapat diakses dan diunduh melalui tautan berikut:
 #### Univariate Analysis
 1. Fitur Kategori
    - Fitur Brand
-     ![image](https://github.com/user-attachments/assets/453a9fa0-1f1b-45e8-b369-36fa13225c0c)
+     <img src="https://github.com/user-attachments/assets/453a9fa0-1f1b-45e8-b369-36fa13225c0c" alt="Fitur Brand" width="500">
      Terdapat 5 kategori pada fitur Cut, secara berurutan dari jumlahnya yang paling banyak yaitu: Ideal, Premium, Very Good, Good, dan Fair. Dari data persentase dapat kita simpulkan bahwa lebih dari 60% sampel merupakan diamonds tipe grade tinggi, yaitu grade Ideal dan Premium.
    - 
 2. Fitur Numerik
