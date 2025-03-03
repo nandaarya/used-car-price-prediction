@@ -397,7 +397,7 @@ Pemilihan metrik ini didasarkan pada karakteristik data regresi dan kebutuhan un
    
    ![image](https://github.com/user-attachments/assets/b6ab2d98-c6d0-4351-a3b7-af9a87ae318b)
 
-   di mana:
+   dimana:
    
    ![image](https://github.com/user-attachments/assets/71c1e665-23f9-470d-95a3-729cacb401a4)
 
@@ -405,6 +405,43 @@ Pemilihan metrik ini didasarkan pada karakteristik data regresi dan kebutuhan un
    - MAE yang lebih rendah berarti model lebih akurat dalam memprediksi harga mobil bekas.
    - MAE tidak memperhitungkan apakah model over-prediksi atau under-prediksi, hanya melihat besarnya error secara absolut.
    
-3. Mean Squared Error (MSE)
-4. Root Mean Squared Error (RMSE)
-5. R² Score (Koefisien Determinasi)
+2. Mean Squared Error (MSE)
+
+   MSE adalah rata-rata kuadrat dari selisih antara nilai prediksi dan nilai sebenarnya. Berbeda dengan MAE, MSE memberikan penalti lebih besar terhadap kesalahan yang besar karena nilai error dikuadratkan.
+
+   Formula:
+
+   ![image](https://github.com/user-attachments/assets/45e799ca-db87-415f-b8ae-a4320c021820)
+
+   Interpretasi:
+   - MSE yang lebih kecil menunjukkan model lebih akurat, karena rata-rata error dikuadratkan dan tidak memperhitungkan arah error.
+   - MSE lebih sensitif terhadap outliers karena kesalahan yang besar dikuadratkan, sehingga memiliki dampak yang lebih signifikan dibandingkan MAE.
+   
+3. Root Mean Squared Error (RMSE)
+
+   RMSE adalah akar kuadrat dari MSE. Metrik ini memberikan gambaran error dalam skala yang sama dengan variabel target, sehingga lebih mudah diinterpretasikan dibandingkan MSE.
+
+   Formula:
+
+   ![image](https://github.com/user-attachments/assets/9f694a6d-7744-489a-b233-3f45063bf30d)
+
+   Interpretasi:
+   - RMSE lebih berguna dibandingkan MSE karena skalanya lebih sesuai dengan harga mobil bekas.
+   - RMSE tetap sensitif terhadap outliers, tetapi lebih mudah dibandingkan MSE dalam memahami besarnya error dalam unit yang sama dengan target variabel.
+
+4. R² Score (Koefisien Determinasi)
+
+   R² Score mengukur seberapa baik model menjelaskan variabilitas data target. Nilai R² berkisar antara 0 hingga 1, dengan nilai yang lebih tinggi menunjukkan model lebih baik dalam menjelaskan hubungan antara fitur dengan harga mobil bekas.
+
+   Formula:
+
+   ![image](https://github.com/user-attachments/assets/f16b37ac-6b70-44d5-a017-5463115756de)
+
+   Di mana:
+
+   ![image](https://github.com/user-attachments/assets/8364d45e-0e2c-4a6f-8d61-5dc141ea8555)
+
+   Interpretasi:
+   - R² mendekati 1 berarti model sangat baik dalam menjelaskan variasi data.
+   - R² mendekati 0 berarti model tidak mampu menjelaskan variasi dalam data.
+   - Jika R² negatif, berarti model lebih buruk dibandingkan dengan model baseline sederhana (misalnya, rata-rata nilai target).
