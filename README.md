@@ -264,5 +264,117 @@ Langkah-langkah yang dilakukan dalam data preparation untuk prediksi harga mobil
    - Meningkatkan stabilitas dan konvergensi model berbasis gradien, seperti Gradient Boosting dan XGBoost.
    - Menghindari skala yang terlalu besar pada fitur tertentu, yang dapat memengaruhi performa model.
 
-## Modeling
+## Modelling
+Setelah tahap data preparation, langkah berikutnya adalah membangun model machine learning untuk memprediksi harga mobil bekas. Dalam penelitian ini, digunakan lima algoritma machine learning yang berbeda untuk membandingkan performanya, yaitu Random Forest, Gradient Boosting, XGBoost, K-Nearest Neighbors (KNN), dan LightGBM.
+
+Agar setiap model dapat bekerja secara optimal, dilakukan hyperparameter tuning menggunakan GridSearchCV untuk menemukan kombinasi parameter terbaik yang menghasilkan performa terbaik pada data validasi.
+
+1. Random Forest
+   Random Forest adalah algoritma berbasis ensemble yang menggabungkan banyak pohon keputusan untuk meningkatkan akurasi prediksi dan mengurangi overfitting.
+
+   - Parameter yang digunakan:
+     - n_estimators: 300, 500
+     - max_depth: 10, 20
+     - min_samples_split: 5, 10
+     - min_samples_leaf: 1, 2
+       
+   - Kelebihan:
+     - Mampu menangani data non-linear dengan baik.
+     - Tidak sensitif terhadap outliers.
+     - Relatif mudah untuk diinterpretasikan dibandingkan boosting methods.
+       
+   - Kekurangan:
+     - Cenderung lebih lambat dibandingkan model boosting jika jumlah estimators terlalu besar.
+     - Tidak sebaik model boosting dalam menangkap pola kompleks pada dataset besar.
+       
+2. Gradient Boosting
+   Gradient Boosting adalah metode boosting yang secara bertahap membangun model berdasarkan kesalahan dari model sebelumnya.
+
+   - Parameter yang digunakan:
+     - n_estimators: 100, 300, 500
+     - learning_rate: 0.01, 0.1, 0.5
+     - max_depth: 7, 15
+       
+   - Kelebihan:
+     - Lebih akurat dibandingkan Random Forest dalam dataset yang besar.
+     - Mampu menangani fitur yang tidak relevan dengan lebih baik.
+     - Dapat dioptimalkan lebih lanjut dengan hyperparameter tuning.
+       
+   - Kekurangan:
+     - Lebih lambat dibandingkan Random Forest karena bersifat iteratif.
+     - Memerlukan tuning parameter yang lebih kompleks.
+       
+3. XGBoost
+   XGBoost adalah versi yang lebih efisien dari Gradient Boosting, yang dirancang untuk memberikan performa lebih cepat dengan optimasi berbasis GPU.
+
+   - Parameter yang digunakan:
+     - n_estimators: 100, 300, 500
+     - max_depth: 7, 15
+     - learning_rate: 0.01, 0.1, 0.5
+       
+   - Kelebihan:
+     - Salah satu algoritma terbaik untuk dataset tabular.
+     - Memiliki fitur built-in untuk menangani missing values.
+     - Mendukung parallel processing, lebih cepat dari Gradient Boosting.
+       
+   - Kekurangan:
+     - Lebih sulit untuk dituning dibandingkan Random Forest.
+     - Bisa lebih kompleks dalam interpretasi dibandingkan model lainnya.
+       
+4. K-Nearest Neighbors (KNN)
+   KNN adalah model berbasis instance learning yang menentukan prediksi berdasarkan rata-rata nilai dari tetangga terdekatnya.
+
+   - Parameter yang digunakan:
+     - n_neighbors: 7, 10, 20
+     - weights: uniform, distance
+     - metric: euclidean, manhattan
+       
+   - Kelebihan:
+     - Mudah diimplementasikan dan diinterpretasikan.
+     - Bekerja baik pada dataset kecil.
+       
+   - Kekurangan:
+     - Sangat lambat untuk dataset besar karena perlu menghitung jarak ke setiap titik data.
+     - Rentan terhadap noise dan outliers dalam data.
+       
+5. LightGBM
+   LightGBM adalah algoritma boosting berbasis pohon yang lebih ringan dan cepat dibandingkan XGBoost, dengan teknik pembelajaran berbasis histogram.
+
+   - Parameter yang digunakan:
+     - n_estimators: 100, 300, 500
+     - learning_rate: 0.01, 0.1, 0.3
+     - num_leaves: 31, 50
+     - max_depth: -1, 15
+       
+   - Kelebihan:
+     - Lebih cepat dibandingkan XGBoost pada dataset besar.
+     - Mampu menangani dataset dengan dimensi tinggi.
+     - Tidak terlalu rentan terhadap overfitting dengan parameter yang tepat.
+       
+   - Kekurangan:
+     - Kurang stabil dibandingkan XGBoost dalam beberapa kasus.
+     - Tidak seintuitif Random Forest dalam hal interpretasi model.
+
+### Hyperparameter Tuning dengan GridSearchCV
+Agar model dapat bekerja optimal, dilakukan pencarian parameter terbaik menggunakan GridSearchCV.
+
+Tahapan yang dilakukan:
+
+1. Menentukan range parameter yang akan diuji untuk setiap model (parameter pada setiap model diatas).
+2. Melatih model dengan GridSearchCV, menggunakan validasi silang (cross-validation = 3) untuk mencari kombinasi parameter terbaik.
+3. Memilih parameter terbaik berdasarkan metrik Mean Absolute Error (MAE).
+
+Dengan GridSearchCV, setiap model diuji dengan berbagai kombinasi parameter untuk mencari konfigurasi yang menghasilkan error terkecil.
+
+Hasil GridSearch
+| Model             | MAE       |
+|-------------------|----------|
+| **XGBoost**      | **1582.60** |
+| LightGBM         | 1584.17  |
+| Gradient Boosting | 1584.47  |
+| Random Forest    | 1627.05  |
+| KNN              | 1672.47  |
+
+Berdasarkan hasil GridSearch, model XGBoost memiliki MAE terendah (1582.60), diikuti oleh LightGBM (1584.17) dan Gradient Boosting (1584.47). Model dengan MAE tertinggi adalah KNN (1672.47), yang berarti model ini memiliki performa paling buruk dibandingkan model lainnya. XGBoost adalah model terbaik karena memiliki MAE terendah, yang berarti mampu menghasilkan prediksi harga mobil bekas dengan error paling kecil.
+
 ## Evaluation
