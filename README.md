@@ -131,5 +131,11 @@ Dataset dapat diakses dan diunduh melalui tautan berikut:
      Terdapat 5 kategori pada fitur Transmission, secara berurutan dari jumlahnya yang paling banyak yaitu: Petrol, Diesel, Hybrid, Other, dan Electric. Dari data persentase dapat kita simpulkan bahwa kategori dengan jumlah tertinggi adalah Petrol dengan 55.2 persen dan kategori dengan jumlah terendah adalah Electric dengan 0.0 persen atau 6 data saja.
 
 2. Fitur Numerik
+![image](https://github.com/user-attachments/assets/f4a565d8-c83e-40b5-9d30-e46d36922888)
+Dari gambar diatas, kita dapat mengamati bagian fitur price yang merupakan target pada data kita. Dari histogram price, kita bisa memperoleh beberapa informasi, antara lain:
+- Peningkatan harga diamonds sebanding dengan penurunan jumlah sampel. Hal ini dapat kita lihat jelas dari histogram "price" yang grafiknya mengalami penurunan seiring dengan semakin banyaknya jumlah sampel.
+- Rentang harga mobil bekas cukup tinggi yaitu dari skala ratusan Pound Sterling (£) hingga sekitar £60.000.
+- Setengah harga berlian bernilai di bawah £20.000.
+- Distribusi harga miring ke kanan (right-skewed). Hal ini akan berimplikasi pada model.
 
 #### Multivariate Analysis
