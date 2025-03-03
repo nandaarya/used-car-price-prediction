@@ -1,4 +1,4 @@
-# Laporan Predictive Analytics: Model Machine Learning untuk Prediksi Harga Mobil Bekas
+![image](https://github.com/user-attachments/assets/c502585f-158f-49aa-b01f-8164298c08b0)# Laporan Predictive Analytics: Model Machine Learning untuk Prediksi Harga Mobil Bekas
 
 Untuk memenuhi submission pertama Predictive Analytic kelas Machine Learning Terapan - Dicoding Academy
 
@@ -159,3 +159,25 @@ Dataset dapat diakses dan diunduh melalui tautan berikut:
     - mpg memiliki distribusi yang terpusat di 50.
 
 #### Multivariate Analysis
+1. Fitur Kategori
+   - Brand
+     
+     ![image](https://github.com/user-attachments/assets/02c58ceb-9158-4760-9951-96b5336b818b)
+     Pada fitur ‘Brand’, ada perbedaan rata-rata harga. 3 brand yaitu mercedes, audi, dan bmw memiliki rata-rata harga yang lebih tinggi daripada brand lainnya. Sehingga kemungkinan fitur brand memiliki pengaruh atau dampak yang cukup besar terhadap rata-rata harga.
+
+   - Model
+     
+     ![image](https://github.com/user-attachments/assets/f79f8792-6a0e-4a6d-bab2-d3f30121ff71)
+     Pada fitur ‘Model’, ada banyak kategori dan tidak banyak perbedaan rata-rata harga. Hanya ada beberapa model yang memiliki perbedaan harga yang signifikan. Sehingga kemungkinan fitur brand memiliki pengaruh atau dampak yang cukup kecil terhadap rata-rata harga.
+
+   - Transmission
+     
+     ![image](https://github.com/user-attachments/assets/f6296aaa-d394-4307-aeb4-525cc558df38)
+     Pada fitur ‘Transmission’, ada perbedaan rata-rata harga. Terutama pada semi-auto dan manual yang memiliki selisih rata-rata yang besar. Sehingga kemungkinan fitur brand memiliki pengaruh atau dampak yang cukup besar terhadap rata-rata harga.
+
+   - Fuel Type
+  
+     ![image](https://github.com/user-attachments/assets/09ccf085-3b0f-4650-a641-60d9c4d03af4)
+     Pada fitur ‘Fuel Type’, ada perbedaan rata-rata harga. Terutama pada diesel dan petrol yang memiliki selisih rata-rata yang cukup besar. Sehingga kemungkinan fitur brand memiliki pengaruh atau dampak yang cukup besar meskipun tidak sebesar fitur transmission terhadap rata-rata harga.
+  
+2. Fitur Numerik
