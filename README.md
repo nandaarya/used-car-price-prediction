@@ -55,13 +55,14 @@ Melakukan data cleaning, termasuk penanganan missing values, encoding fitur kate
   - XGBoost
   - K-Nearest Neighbors (KNN)
   - LightGBM
-- Melakukan hyperparameter tuning dengan Grid Search atau Random Search untuk mendapatkan hasil terbaik.
+- Melakukan hyperparameter tuning dengan Grid Search untuk mendapatkan hasil terbaik.
 3. Evaluasi Model dengan Metrik yang Tepat
 Model akan dievaluasi berdasarkan beberapa metrik utama, yaitu:
 - Mean Absolute Error (MAE)
 - Mean Squared Error (MSE)
 - Root Mean Squared Error (RMSE)
 - R² Score
+
 Model terbaik akan ditentukan berdasarkan kecilnya kesalahan prediksi dan tingginya tingkat variansi data yang dapat dijelaskan oleh model.
 
 Dengan pendekatan ini, model machine learning yang dikembangkan diharapkan dapat memberikan prediksi harga mobil bekas yang lebih akurat dan membantu konsumen serta pelaku industri otomotif dalam pengambilan keputusan yang lebih baik.
