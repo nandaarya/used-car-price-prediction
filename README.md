@@ -460,6 +460,7 @@ Pemilihan metrik ini didasarkan pada karakteristik data regresi dan kebutuhan un
 1. Random Forest
    
    Train MAE = 1180.72, Test MAE = 1599.19
+   
    Train R² = 0.9479, Test R² = 0.9040
 
    Analisis:
@@ -470,6 +471,7 @@ Pemilihan metrik ini didasarkan pada karakteristik data regresi dan kebutuhan un
 2. Gradient Boosting
 
    Train MAE = 1382.73, Test MAE = 1571.23
+   
    Train R² = 0.9306, Test R² = 0.9089
 
    Analisis:
@@ -480,6 +482,7 @@ Pemilihan metrik ini didasarkan pada karakteristik data regresi dan kebutuhan un
 3. XGBoost
 
    Train MAE = 1422.86, Test MAE = 1570.31
+   
    Train R² = 0.9254, Test R² = 0.9089
 
    Analisis:
@@ -490,6 +493,7 @@ Pemilihan metrik ini didasarkan pada karakteristik data regresi dan kebutuhan un
 4. K-Nearest Neighbors (KNN)
 
    Train MAE = 57.79, Test MAE = 1576.40
+   
    Train R² = 0.9978, Test R² = 0.8878
 
    Analisis:
@@ -500,6 +504,7 @@ Pemilihan metrik ini didasarkan pada karakteristik data regresi dan kebutuhan un
 5. LightGBM
 
    Train MAE = 1472.76, Test MAE = 1574.52
+   
    Train R² = 0.9205, Test R² = 0.9087
 
    Analisis:
@@ -542,16 +547,17 @@ Pemilihan metrik ini didasarkan pada karakteristik data regresi dan kebutuhan un
    - Model ini terbukti memiliki generalization yang baik, tetapi masih sedikit kalah dari XGBoost dalam beberapa kasus.
      
 #### Model Terbaik
-| **Peringkat** | **Model**           | **Alasan Peringkat** |
-|--------------|---------------------|----------------------|
-| **1. XGBoost** | **MAE terendah (1582.60), prediksi paling akurat dan stabil.** Model ini memiliki generalisasi terbaik dengan R² Score 0.9089. |
-| **2. Gradient Boosting** | Performa sangat mirip dengan XGBoost (MAE 1584.47), tetapi sedikit kurang stabil dalam beberapa prediksi dibandingkan XGBoost. |
-| **3. LightGBM** | MAE hampir setara dengan Gradient Boosting (1584.17), tetapi dalam beberapa sampel prediksi sedikit kurang akurat dibandingkan XGBoost dan Gradient Boosting. |
-| **4. Random Forest** | MAE lebih tinggi (1627.05), menunjukkan model ini masih memiliki overfitting dan kurang baik dalam menangkap pola harga dibandingkan model boosting. |
-| **5. K-Nearest Neighbors (KNN)** | Overfitting cukup parah (Train MAE: 57.79, Test MAE: 1576.40), R² Score terendah (0.8878), serta prediksi tidak konsisten. Tidak cocok untuk dataset ini. |
+| Peringkat | Model              | Alasan Peringkat |
+|-----------|--------------------|------------------|
+| **1**         | **XGBoost**            | **MAE terendah (1582.60), prediksi paling akurat dan stabil. Model ini memiliki generalisasi terbaik dengan R² Score 0.9089.** |
+| 2         | Gradient Boosting  | Performa sangat mirip dengan XGBoost (MAE 1584.47), tetapi sedikit kurang stabil dalam beberapa prediksi dibandingkan XGBoost. |
+| 3         | LightGBM           | MAE hampir setara dengan Gradient Boosting (1584.17), tetapi dalam beberapa sampel prediksi sedikit kurang akurat dibandingkan XGBoost dan Gradient Boosting. |
+| 4         | Random Forest      | MAE lebih tinggi (1627.05), menunjukkan model ini masih memiliki overfitting dan kurang baik dalam menangkap pola harga dibandingkan model boosting. |
+| 5         | K-Nearest Neighbors (KNN) | Overfitting parah (Train MAE: 57.79, Test MAE: 1576.40), R² Score terendah (0.8878), serta prediksi tidak konsisten. Tidak cocok untuk dataset ini. |
+
 
 Kesimpulan Akhir:
-- XGBoost adalah model terbaik karena memiliki MAE paling rendah, prediksi paling stabil, serta generalisasi yang baik terhadap data test.
+- **XGBoost adalah model terbaik karena memiliki MAE paling rendah, prediksi paling stabil, serta generalisasi yang baik terhadap data test.**
 - Gradient Boosting dan LightGBM berada di peringkat kedua dan ketiga, dengan performa hampir sama, tetapi sedikit lebih lemah dibandingkan XGBoost.
 - Random Forest memiliki MAE yang lebih tinggi dan menunjukkan tanda-tanda overfitting.
 - KNN memiliki performa terburuk, dengan overfitting ekstrem dan generalisasi yang sangat buruk.
