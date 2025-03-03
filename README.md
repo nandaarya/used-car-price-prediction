@@ -48,6 +48,7 @@ Untuk mencapai tujuan tersebut, penelitian ini mengusulkan beberapa solusi:
 Mengumpulkan dataset dari sumber terpercaya.
 Menganalisis data menggunakan univariate dan multivariate analysis untuk menemukan pola yang mempengaruhi harga.
 Melakukan data cleaning, termasuk penanganan missing values, encoding fitur kategorikal, serta normalisasi data numerik agar model dapat memahami informasi dengan lebih baik.
+
 2. Pemilihan Algoritma dan Optimasi Model
 - Menggunakan berbagai algoritma machine learning, seperti:
   - Random Forest
@@ -56,6 +57,7 @@ Melakukan data cleaning, termasuk penanganan missing values, encoding fitur kate
   - K-Nearest Neighbors (KNN)
   - LightGBM
 - Melakukan hyperparameter tuning dengan Grid Search untuk mendapatkan hasil terbaik.
+
 3. Evaluasi Model dengan Metrik yang Tepat
 Model akan dievaluasi berdasarkan beberapa metrik utama, yaitu:
 - Mean Absolute Error (MAE)
@@ -93,13 +95,25 @@ Dataset dapat diakses dan diunduh melalui tautan berikut:
 
 ### Analisis Kondisi Data
 1. Jumlah Data: Dataset berisi 108.540 entri dengan 10 kolom fitur.
+
 2. Kekurangan Data:
 - Kolom tax dan mpg memiliki nilai null (kurang lebih 9.353 data kosong).
 - Fitur lainnya memiliki data yang lengkap (tidak ada nilai null).
+
 3. Tipe Data:
 - 4 kolom kategorikal: brand, model, transmission, fuelType
 - 3 kolom numerik integer: year, price, mileage
 - 3 kolom numerik float: engineSize, tax, mpg
+
 4. Ukuran Dataset: 8.3+ MB
 
 ### Exploratory Data analysis (EDA)
+#### Univariate Analysis
+1. Fitur Kategori
+   - Fitur Brand
+     ![image](https://github.com/user-attachments/assets/453a9fa0-1f1b-45e8-b369-36fa13225c0c)
+     Terdapat 5 kategori pada fitur Cut, secara berurutan dari jumlahnya yang paling banyak yaitu: Ideal, Premium, Very Good, Good, dan Fair. Dari data persentase dapat kita simpulkan bahwa lebih dari 60% sampel merupakan diamonds tipe grade tinggi, yaitu grade Ideal dan Premium.
+   - 
+2. Fitur Numerik
+
+#### Multivariate Analysis
