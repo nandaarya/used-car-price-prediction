@@ -394,15 +394,17 @@ Pemilihan metrik ini didasarkan pada karakteristik data regresi dan kebutuhan un
    MAE mengukur rata-rata selisih absolut antara nilai prediksi dan nilai sebenarnya. Metrik ini memberikan gambaran seberapa besar rata-rata kesalahan prediksi model dalam satuan yang sama dengan target variabel (dalam hal ini, harga mobil bekas dalam satuan mata uang Pound Sterling (£)).
 
    Formula:
+   
    ![image](https://github.com/user-attachments/assets/b6ab2d98-c6d0-4351-a3b7-af9a87ae318b)
 
    di mana:
+   
    ![image](https://github.com/user-attachments/assets/71c1e665-23f9-470d-95a3-729cacb401a4)
 
    Interpretasi:
    - MAE yang lebih rendah berarti model lebih akurat dalam memprediksi harga mobil bekas.
    - MAE tidak memperhitungkan apakah model over-prediksi atau under-prediksi, hanya melihat besarnya error secara absolut.
    
-2. Mean Squared Error (MSE)
+3. Mean Squared Error (MSE)
 4. Root Mean Squared Error (RMSE)
 5. R² Score (Koefisien Determinasi)
