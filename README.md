@@ -66,3 +66,40 @@ Model akan dievaluasi berdasarkan beberapa metrik utama, yaitu:
 Model terbaik akan ditentukan berdasarkan kecilnya kesalahan prediksi dan tingginya tingkat variansi data yang dapat dijelaskan oleh model.
 
 Dengan pendekatan ini, model machine learning yang dikembangkan diharapkan dapat memberikan prediksi harga mobil bekas yang lebih akurat dan membantu konsumen serta pelaku industri otomotif dalam pengambilan keputusan yang lebih baik.
+
+## Data Understanding
+### Deskripsi Data
+Dataset yang digunakan dalam penelitian ini berisi 108.540 entri data mobil bekas yang terdaftar di pasar mobil bekas di Inggris (UK). Data ini dikumpulkan melalui scraping dari berbagai listing kendaraan bekas dan telah dibersihkan untuk menghilangkan duplikasi serta memastikan keakuratan kolom yang tersedia.
+
+Dataset ini bertujuan untuk membantu dalam memprediksi harga jual mobil bekas dengan mempertimbangkan berbagai faktor seperti merek, model, tahun produksi, jarak tempuh, tipe bahan bakar, ukuran mesin, pajak, serta efisiensi bahan bakar (miles per gallon/mpg).
+
+### Sumber Data
+Dataset dapat diakses dan diunduh melalui tautan berikut:
+[[100,000 UK Used Car Data set]](https://www.kaggle.com/datasets/adityadesai13/used-car-dataset-ford-and-mercedes)
+
+### Struktur Dataset
+| No | Nama Kolom    | Deskripsi                                      | Tipe Data  | Jumlah Data Non-Null |
+|----|-------------|--------------------------------|------------|---------------------|
+| 1  | brand       | Merek mobil (misalnya, Ford, Mercedes) | object     | 108.540 |
+| 2  | model       | Model spesifik dari mobil | object     | 108.540 |
+| 3  | year        | Tahun produksi kendaraan | int64      | 108.540 |
+| 4  | price       | Harga jual mobil dalam mata uang Pound Sterling (£) | int64      | 108.540 |
+| 5  | transmission | Jenis transmisi (Manual/Automatic) | object     | 108.540 |
+| 6  | mileage     | Jarak tempuh mobil dalam mil | int64      | 108.540 |
+| 7  | fuelType    | Jenis bahan bakar (Petrol, Diesel, Hybrid, Electric) | object     | 108.540 |
+| 8  | engineSize  | Kapasitas mesin dalam liter | float64    | 108.540 |
+| 9  | tax        | Pajak kendaraan per tahun (£) | float64    | 99.187 |
+| 10 | mpg        | Efisiensi bahan bakar dalam mil per galon | float64    | 99.187 |
+
+### Analisis Kondisi Data
+1. Jumlah Data: Dataset berisi 108.540 entri dengan 10 kolom fitur.
+2. Kekurangan Data:
+- Kolom tax dan mpg memiliki nilai null (kurang lebih 9.353 data kosong).
+- Fitur lainnya memiliki data yang lengkap (tidak ada nilai null).
+3. Tipe Data:
+- 4 kolom kategorikal: brand, model, transmission, fuelType
+- 3 kolom numerik integer: year, price, mileage
+- 3 kolom numerik float: engineSize, tax, mpg
+4. Ukuran Dataset: 8.3+ MB
+
+### Exploratory Data analysis (EDA)
