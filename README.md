@@ -445,3 +445,13 @@ Pemilihan metrik ini didasarkan pada karakteristik data regresi dan kebutuhan un
    - R² mendekati 1 berarti model sangat baik dalam menjelaskan variasi data.
    - R² mendekati 0 berarti model tidak mampu menjelaskan variasi dalam data.
    - Jika R² negatif, berarti model lebih buruk dibandingkan dengan model baseline sederhana (misalnya, rata-rata nilai target).
+
+### Hasil Evaluasi
+#### Perbandingan Performa Model
+| Model             | Train MAE | Test MAE | Train MSE     | Test MSE     | Train RMSE | Test RMSE | Train R² | Test R² |
+|-------------------|----------|----------|--------------|--------------|------------|------------|----------|----------|
+| Random Forest    | 1180.72  | 1599.19  | 2.6233e+06   | 4.9189e+06   | 1619.66   | 2217.86   | 0.9479   | 0.9040   |
+| Gradient Boosting | 1382.73  | 1571.23  | 3.4928e+06   | 4.6646e+06   | 1868.92   | 2159.78   | 0.9306   | 0.9089   |
+| XGBoost          | 1422.86  | 1570.31  | 3.7578e+06   | 4.6656e+06   | 1938.51   | 2160.00   | 0.9254   | 0.9089   |
+| KNN              |  57.79   | 1576.40  | 1.0887e+05   | 5.7502e+06   |  329.96   | 2397.97   | 0.9978   | 0.8878   |
+| LightGBM         | 1472.76  | 1574.52  | 4.0027e+06   | 4.6753e+06   | 2000.70   | 2162.26   | 0.9205   | 0.9087   |
