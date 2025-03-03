@@ -6,17 +6,21 @@ Untuk memenuhi submission pertama Predictive Analytic kelas Machine Learning Ter
 
 ## Domain Proyek
 
-Harga mobil bekas dipengaruhi oleh banyak faktor seperti tahun produksi, merek, model, jarak tempuh, jenis bahan bakar, dan kondisi kendaraan. Menentukan harga mobil bekas dengan tepat sangat penting bagi penjual dan pembeli agar mendapatkan harga yang adil di pasar. Prediksi harga mobil bekas yang akurat dapat membantu pengguna dalam pengambilan keputusan yang lebih baik dalam jual beli kendaraan.
+### Latar Belakang
+Pasar mobil bekas terus berkembang pesat seiring meningkatnya produksi kendaraan baru, yang berdampak pada meningkatnya jumlah mobil bekas di pasaran. Pada tahun 2021, produksi mobil penumpang melampaui 90 juta unit, yang secara langsung mempengaruhi dinamika harga mobil bekas (Vaneesha et al., 2024).
 
-Beberapa studi telah meneliti faktor-faktor yang mempengaruhi harga mobil bekas. Studi yang dilakukan oleh Kumar & Gupta [2020] menunjukkan bahwa faktor-faktor seperti usia kendaraan, jarak tempuh, dan merek memiliki korelasi yang signifikan terhadap harga jual. Penelitian lainnya oleh Smith et al. [2021] menemukan bahwa model machine learning seperti Random Forest dan XGBoost dapat memberikan hasil prediksi harga mobil dengan tingkat akurasi yang tinggi.
+Penentuan harga mobil bekas menjadi tantangan karena dipengaruhi oleh berbagai faktor seperti tahun produksi, merek, model, jarak tempuh, dan kondisi kendaraan. Metode tradisional seperti perbandingan manual atau penilaian subjektif oleh dealer sering kali tidak konsisten dan kurang akurat, menyebabkan harga yang tidak sesuai dengan nilai pasar (Vaneesha et al., 2024).
 
-Dalam proyek ini, peneliti ingin mengembangkan model machine learning yang dapat memprediksi harga mobil bekas secara akurat dengan mempertimbangkan berbagai faktor yang mempengaruhi nilai jual kendaraan.
+### Mengapa Masalah Ini Harus Diselesaikan?
+Ketidakakuratan dalam estimasi harga dapat merugikan baik penjual maupun pembeli. Penjual berisiko menetapkan harga terlalu rendah, sementara pembeli bisa membayar lebih dari nilai wajar. Selain itu, dealer dan platform jual-beli membutuhkan sistem prediksi harga yang lebih transparan dan objektif untuk meningkatkan efisiensi bisnis mereka (Vaneesha et al., 2024).
 
-Referensi terkait:
+Untuk mengatasi permasalahan ini, diperlukan sebuah model machine learning yang dapat memprediksi harga mobil bekas secara akurat. Model ini akan dilatih menggunakan data historis kendaraan, seperti spesifikasi mobil, usia, dan kondisi penggunaan, guna menghasilkan estimasi harga yang lebih objektif dan berdasarkan pola yang terdeteksi dari data. Penelitian sebelumnya menunjukkan bahwa metode berbasis machine learning dapat meningkatkan akurasi prediksi harga mobil bekas. Studi oleh Samruddhi dan Kumar (2020) menemukan bahwa model berbasis data mampu meningkatkan akurasi estimasi harga hingga 85%, sementara penelitian oleh Vaneesha et al. (2024) menunjukkan bahwa metode otomatisasi berbasis machine learning dapat mengurangi kesalahan prediksi secara signifikan.
 
-"Car Price Prediction Using Machine Learning" oleh Kumar & Gupta (2020)
+Dengan membangun model prediksi berbasis machine learning, diharapkan dapat tercipta sistem yang lebih transparan dan efisien dalam menentukan harga mobil bekas, membantu pembeli, penjual, serta pelaku industri otomotif dalam pengambilan keputusan yang lebih baik.
 
-"A Comparative Analysis of Machine Learning Models for Used Car Price Prediction" oleh Smith et al. (2021)
+### Referensi
+- Samruddhi, K., & Kumar, R. A. (2020). Used Car Price Prediction using K-Nearest Neighbor Based Model. International Journal of Innovative Research in Applied Sciences and Engineering, 4(3), 686-689.
+- Vaneesha, K. H., Srinivas, V., Abhishek, V., & Srinivas, S. (2024). Comparative Analysis of Machine Learning Algorithms for Used Car Price Prediction. International Journal of Current Science Research and Review, 7(9), 7220-7228.
 
 ---
 
