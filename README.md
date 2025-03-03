@@ -113,22 +113,22 @@ Dataset dapat diakses dan diunduh melalui tautan berikut:
    - Brand
      
      ![Fitur Brand](https://github.com/user-attachments/assets/453a9fa0-1f1b-45e8-b369-36fa13225c0c)
-     Terdapat 9 kategori pada fitur Brand, secara berurutan dari jumlahnya yang paling banyak yaitu: ford, mercedes, VW, Vauxhaul, bmw, audi, toyota, skoda, dan hyundai. Dari data persentase dapat kita simpulkan bahwa kategori dengan jumlah tertinggi adalah ford dengan 21.6 persen, kategori dengan jumlah terendah adalah hyundai dengan 4.5 persen, dan kategori tersisa memiliki persentase berkisar 5.8 - 15.7 persen.
+     Terdapat 9 kategori pada fitur Brand, secara berurutan dari jumlahnya yang paling banyak yaitu: ford, mercedes, VW, Vauxhaul, bmw, audi, toyota, skoda, dan hyundai. Dari data persentase dapat disimpulkan bahwa kategori dengan jumlah tertinggi adalah ford dengan 21.6 persen, kategori dengan jumlah terendah adalah hyundai dengan 4.5 persen, dan kategori tersisa memiliki persentase berkisar 5.8 - 15.7 persen.
      
    - Model
      
      ![image](https://github.com/user-attachments/assets/4cc4630f-4da0-45e8-852a-ed83c0e20408)
-     Terdapat 195 kategori pada fitur Model, dengan 5 fitur dengan persentase tertinggi yaitu: Focus, C Class, Fiesta, Golf, dan Corsa. Dari persentase dapat kita simpulkan bahwa kategori dengan jumlah tertinggi adalah ford dengan 9.3 persen dan beberapa kategori hanya memiliki satu data saja.
+     Terdapat 195 kategori pada fitur Model, dengan 5 fitur dengan persentase tertinggi yaitu: Focus, C Class, Fiesta, Golf, dan Corsa. Dari persentase dapat disimpulkan bahwa kategori dengan jumlah tertinggi adalah ford dengan 9.3 persen dan beberapa kategori hanya memiliki satu data saja.
      
    - Transmission
      
      ![image](https://github.com/user-attachments/assets/cd165698-1be0-45bb-9514-caccc196bfc6)
-     Terdapat 4 kategori pada fitur Transmission, secara berurutan dari jumlahnya yang paling banyak yaitu: Manual, Semi-Auto, Automatic, dan Other. Dari data persentase dapat kita simpulkan bahwa kategori dengan jumlah tertinggi adalah Manual dengan 56.5 persen dan kategori dengan jumlah terendah adalah other dengan 0.0 persen atau 10 data saja.
+     Terdapat 4 kategori pada fitur Transmission, secara berurutan dari jumlahnya yang paling banyak yaitu: Manual, Semi-Auto, Automatic, dan Other. Dari data persentase dapat disimpulkan bahwa kategori dengan jumlah tertinggi adalah Manual dengan 56.5 persen dan kategori dengan jumlah terendah adalah other dengan 0.0 persen atau 10 data saja.
      
    - Fuel Type
      
      ![image](https://github.com/user-attachments/assets/7a07d703-cae3-48a4-a798-7ae869da8ccd)
-     Terdapat 5 kategori pada fitur Transmission, secara berurutan dari jumlahnya yang paling banyak yaitu: Petrol, Diesel, Hybrid, Other, dan Electric. Dari data persentase dapat kita simpulkan bahwa kategori dengan jumlah tertinggi adalah Petrol dengan 55.2 persen dan kategori dengan jumlah terendah adalah Electric dengan 0.0 persen atau 6 data saja.
+     Terdapat 5 kategori pada fitur Transmission, secara berurutan dari jumlahnya yang paling banyak yaitu: Petrol, Diesel, Hybrid, Other, dan Electric. Dari data persentase dapat disimpulkan bahwa kategori dengan jumlah tertinggi adalah Petrol dengan 55.2 persen dan kategori dengan jumlah terendah adalah Electric dengan 0.0 persen atau 6 data saja.
 
 2. Fitur Numerik
 ![image](https://github.com/user-attachments/assets/f4a565d8-c83e-40b5-9d30-e46d36922888)
@@ -182,13 +182,13 @@ Dataset dapat diakses dan diunduh melalui tautan berikut:
   
 2. Fitur Numerik
 ![image](https://github.com/user-attachments/assets/92af1a13-f5fd-4920-a3ba-a726e4e2eec6)
-Dari grafik pairplot diatas, kita dapat fokus pada sumbu "price" dimana merupakan fitur target kita dan dapat menyimpulkan bahwa:
+Dari grafik pairplot diatas, jika fokus pada sumbu "price" dimana merupakan fitur target, dapat disimpulkan bahwa:
   - Fitur year memiliki korelasi positif dengan fitur price.
   - Fitur mileage memiliki korelasi negatif dengan fitur price.
   - Fitur engine size, tax, dan mpg tidak memiliki korelasi yang kuat dengan fitur price karena memiliki pola yang cukup acak.
 
 ![image](https://github.com/user-attachments/assets/6f11e5be-2403-4ba5-b2a1-680bbfe51ff5)
-Untuk lebih jelasnya, kita dapat mengamati grafik korelasi diatas yang menunjukkan nilai korelasi fitur price dengan fitur numerik lainnya. Dapat disimpulkan bahwa:
+Untuk lebih jelasnya, dapat diamati grafik korelasi diatas yang menunjukkan nilai korelasi fitur price dengan fitur numerik lainnya. Dapat disimpulkan bahwa:
   - fitur year, mileage, dan engine size memiliki korelasi yang cukup kuat dengan fitur price.
   - fitur tax dan mpg memiliki korelasi dengan fitur price, tetapi tidak cukup kuat.
 
