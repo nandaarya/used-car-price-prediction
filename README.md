@@ -455,3 +455,104 @@ Pemilihan metrik ini didasarkan pada karakteristik data regresi dan kebutuhan un
 | XGBoost          | 1422.86  | 1570.31  | 3.7578e+06   | 4.6656e+06   | 1938.51   | 2160.00   | 0.9254   | 0.9089   |
 | KNN              |  57.79   | 1576.40  | 1.0887e+05   | 5.7502e+06   |  329.96   | 2397.97   | 0.9978   | 0.8878   |
 | LightGBM         | 1472.76  | 1574.52  | 4.0027e+06   | 4.6753e+06   | 2000.70   | 2162.26   | 0.9205   | 0.9087   |
+
+#### Analisis Performa Model
+1. Random Forest
+   
+   Train MAE = 1180.72, Test MAE = 1599.19
+   Train R² = 0.9479, Test R² = 0.9040
+
+   Analisis:
+   - Random Forest menunjukkan performa yang baik dengan R² Score yang tinggi (0.9040).
+   - Terdapat sedikit overfitting, terlihat dari selisih antara Train MAE dan Test MAE yang cukup besar.
+   - RMSE pada test data cukup tinggi (2217.86), menunjukkan bahwa model masih memiliki error yang relatif besar.
+     
+2. Gradient Boosting
+
+   Train MAE = 1382.73, Test MAE = 1571.23
+   Train R² = 0.9306, Test R² = 0.9089
+
+   Analisis:
+   - Model ini memiliki generalisasi yang baik karena Train R² dan Test R² tidak terlalu berbeda.
+   - MAE dan RMSE lebih kecil dibandingkan Random Forest, menunjukkan bahwa model lebih akurat dalam prediksi harga mobil bekas.
+   - Model ini lebih stabil dibandingkan Random Forest dan memiliki error yang lebih kecil pada test data.
+     
+3. XGBoost
+
+   Train MAE = 1422.86, Test MAE = 1570.31
+   Train R² = 0.9254, Test R² = 0.9089
+
+   Analisis:
+   - Model ini memiliki performa yang hampir sama dengan Gradient Boosting.
+   - Test MAE dan Test RMSE sangat mirip dengan Gradient Boosting, tetapi Train MAE sedikit lebih besar, menunjukkan bahwa model lebih robust dan tidak terlalu overfitting.
+   - R² Score pada test data (0.9089) sangat tinggi, menandakan model mampu menjelaskan variasi harga mobil dengan baik.
+     
+4. K-Nearest Neighbors (KNN)
+
+   Train MAE = 57.79, Test MAE = 1576.40
+   Train R² = 0.9978, Test R² = 0.8878
+
+   Analisis:
+   - Model ini mengalami overfitting yang cukup parah.
+   - Train MAE sangat kecil (57.79), tetapi Test MAE sangat tinggi (1576.40), menunjukkan bahwa model hanya menghafal data training tetapi gagal melakukan generalisasi pada data baru.
+   - R² Score pada data test lebih rendah dibandingkan model lainnya, menandakan bahwa model ini tidak cocok untuk dataset ini.
+     
+5. LightGBM
+
+   Train MAE = 1472.76, Test MAE = 1574.52
+   Train R² = 0.9205, Test R² = 0.9087
+
+   Analisis:
+   - Performa hampir setara dengan Gradient Boosting dan XGBoost, tetapi sedikit lebih buruk dalam hal RMSE.
+   - Train dan Test R² Score hampir sama, menunjukkan bahwa model memiliki generalisasi yang baik.
+   - Model ini dapat menjadi alternatif jika diperlukan model yang lebih cepat dibandingkan XGBoost dan Gradient Boosting.
+
+#### Percobaan Prediksi Model
+| Index  | y_true | Random Forest | Gradient Boosting | XGBoost  | KNN     | LightGBM  |
+|--------|--------|---------------|-------------------|----------|---------|-----------|
+| 70431  | 27555  | 21118.6       | 21742.2          | 20837.2  | 22744.6 | 23655.9   |
+| 64390  |  7891  |  9708.1       |  8806.0          |  9011.8  |  7583.4 |  9106.9   |
+| 8996   | 14510  | 13669.1       | 13917.8          | 13987.3  | 14510.0 | 13646.4   |
+| 51511  |  7350  |  6591.9       |  7099.8          |  6913.4  |  6785.2 |  6887.8   |
+| 81826  | 20290  | 17817.5       | 19266.4          | 18115.1  | 19516.6 | 19223.9   |
+
+1. Random Forest
+   - Cenderung menghasilkan prediksi yang lebih rendah daripada harga sebenarnya, terutama pada data dengan harga tinggi.
+   - Pada indeks 70431, prediksi model jauh lebih kecil (21,118.6) dibandingkan harga sebenarnya (27,555).
+   - Hal ini sesuai dengan analisis sebelumnya bahwa Random Forest memiliki sedikit overfitting, dengan MAE lebih tinggi dibandingkan model boosting.
+
+2. Gradient Boosting
+   - Memiliki prediksi yang lebih dekat dengan harga sebenarnya dibandingkan Random Forest.
+   - Pada indeks 81826, prediksi Gradient Boosting (19,266.4) lebih dekat dengan harga asli (20,290) dibandingkan Random Forest (17,817.5).
+   - Model ini memiliki MAE yang rendah dan performa yang baik dalam generalisasi.
+     
+3. XGBoost
+   - Prediksi paling stabil dibandingkan model lainnya, dengan error yang lebih kecil secara konsisten.
+   - Pada indeks 8996, prediksi XGBoost (13,987.3) sangat mendekati harga sebenarnya (14,510), lebih akurat dibandingkan model lainnya.
+   - Hal ini sesuai dengan evaluasi sebelumnya, di mana XGBoost memiliki MAE paling rendah dan generalisasi yang baik.
+     
+4. K-Nearest Neighbors (KNN)
+   - Cenderung memberikan prediksi yang lebih ekstrem atau mendekati nilai sebenarnya secara tidak konsisten.
+   - Pada indeks 8996, KNN tepat memprediksi nilai sebenarnya (14,510), tetapi pada indeks 70431, prediksi KNN (22,744.6) jauh dari harga sebenarnya (27,555).
+   - Hal ini sejalan dengan analisis sebelumnya bahwa KNN mengalami overfitting, dengan perbedaan besar antara Train MAE (57.79) dan Test MAE (1576.40).
+     
+5. LightGBM
+   - Prediksi mendekati Gradient Boosting dan XGBoost, menunjukkan model ini cukup akurat dalam menangkap pola harga.
+   - Pada indeks 64390, prediksi LightGBM (9,106.9) lebih akurat dibandingkan KNN (7,583.4) tetapi sedikit lebih tinggi dibandingkan XGBoost (9,011.8).
+   - Model ini terbukti memiliki generalization yang baik, tetapi masih sedikit kalah dari XGBoost dalam beberapa kasus.
+     
+#### Model Terbaik
+| **Peringkat** | **Model**           | **Alasan Peringkat** |
+|--------------|---------------------|----------------------|
+| **1. XGBoost** | **MAE terendah (1582.60), prediksi paling akurat dan stabil.** Model ini memiliki generalisasi terbaik dengan R² Score 0.9089. |
+| **2. Gradient Boosting** | Performa sangat mirip dengan XGBoost (MAE 1584.47), tetapi sedikit kurang stabil dalam beberapa prediksi dibandingkan XGBoost. |
+| **3. LightGBM** | MAE hampir setara dengan Gradient Boosting (1584.17), tetapi dalam beberapa sampel prediksi sedikit kurang akurat dibandingkan XGBoost dan Gradient Boosting. |
+| **4. Random Forest** | MAE lebih tinggi (1627.05), menunjukkan model ini masih memiliki overfitting dan kurang baik dalam menangkap pola harga dibandingkan model boosting. |
+| **5. K-Nearest Neighbors (KNN)** | Overfitting cukup parah (Train MAE: 57.79, Test MAE: 1576.40), R² Score terendah (0.8878), serta prediksi tidak konsisten. Tidak cocok untuk dataset ini. |
+
+Kesimpulan Akhir:
+- XGBoost adalah model terbaik karena memiliki MAE paling rendah, prediksi paling stabil, serta generalisasi yang baik terhadap data test.
+- Gradient Boosting dan LightGBM berada di peringkat kedua dan ketiga, dengan performa hampir sama, tetapi sedikit lebih lemah dibandingkan XGBoost.
+- Random Forest memiliki MAE yang lebih tinggi dan menunjukkan tanda-tanda overfitting.
+- KNN memiliki performa terburuk, dengan overfitting ekstrem dan generalisasi yang sangat buruk.
+- Dengan hasil ini, XGBoost menjadi pilihan utama untuk digunakan dalam prediksi harga mobil bekas, karena memberikan keseimbangan terbaik antara akurasi, stabilitas, dan generalisasi terhadap data baru.
