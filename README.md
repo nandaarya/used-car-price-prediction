@@ -181,3 +181,5 @@ Dataset dapat diakses dan diunduh melalui tautan berikut:
      Pada fitur ‘Fuel Type’, ada perbedaan rata-rata harga. Terutama pada diesel dan petrol yang memiliki selisih rata-rata yang cukup besar. Sehingga kemungkinan fitur brand memiliki pengaruh atau dampak yang cukup besar meskipun tidak sebesar fitur transmission terhadap rata-rata harga.
   
 2. Fitur Numerik
+![image](https://github.com/user-attachments/assets/92af1a13-f5fd-4920-a3ba-a726e4e2eec6)
+
