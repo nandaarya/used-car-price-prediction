@@ -385,3 +385,24 @@ Berdasarkan hasil GridSearch, model XGBoost memiliki MAE terendah (1582.60), dii
 XGBoost adalah model terbaik karena memiliki MAE terendah, yang berarti mampu menghasilkan prediksi harga mobil bekas dengan error paling kecil.
 
 ## Evaluation
+Evaluasi model dilakukan untuk menilai sejauh mana model machine learning yang telah dikembangkan mampu memprediksi harga mobil bekas dengan akurasi tinggi. Pada penelitian ini, digunakan empat metrik evaluasi utama, yaitu Mean Absolute Error (MAE), Mean Squared Error (MSE), Root Mean Squared Error (RMSE), dan R² Score (Coefficient of Determination).
+
+Pemilihan metrik ini didasarkan pada karakteristik data regresi dan kebutuhan untuk mengukur seberapa jauh prediksi model dari nilai sebenarnya.
+
+1. Mean Absolute Error (MAE)
+   
+   MAE mengukur rata-rata selisih absolut antara nilai prediksi dan nilai sebenarnya. Metrik ini memberikan gambaran seberapa besar rata-rata kesalahan prediksi model dalam satuan yang sama dengan target variabel (dalam hal ini, harga mobil bekas dalam satuan mata uang Pound Sterling (£)).
+
+   Formula:
+   ![image](https://github.com/user-attachments/assets/b6ab2d98-c6d0-4351-a3b7-af9a87ae318b)
+
+   di mana:
+   ![image](https://github.com/user-attachments/assets/71c1e665-23f9-470d-95a3-729cacb401a4)
+
+   Interpretasi:
+   - MAE yang lebih rendah berarti model lebih akurat dalam memprediksi harga mobil bekas.
+   - MAE tidak memperhitungkan apakah model over-prediksi atau under-prediksi, hanya melihat besarnya error secara absolut.
+   
+2. Mean Squared Error (MSE)
+4. Root Mean Squared Error (RMSE)
+5. R² Score (Koefisien Determinasi)
