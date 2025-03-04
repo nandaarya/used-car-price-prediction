@@ -375,7 +375,7 @@ Tahapan yang dilakukan:
 
 Dengan GridSearchCV, setiap model diuji dengan berbagai kombinasi parameter untuk mencari konfigurasi yang menghasilkan error terkecil.
 
-Hasil GridSearch
+**Hasil GridSearch**
 | **Model**            | **MAE**       | **Best Parameters**  |
 |----------------------|--------------|------------------------------------------------------------------|
 | **XGBoost**         | **1582.60**   | `learning_rate=0.1, max_depth=7, n_estimators=500`              |
@@ -384,10 +384,18 @@ Hasil GridSearch
 | **Random Forest**   | **1627.05**   | `max_depth=20, min_samples_leaf=1, min_samples_split=10, n_estimators=500` |
 | **KNN**             | **1672.47**   | `metric='manhattan', n_neighbors=20, weights='distance'`        |
 
+Dari hasil GridSearch diatas, didapatkan model dengan parameter terbaik dari setiap model, dengan rincian sebagai berikut:
 
-Berdasarkan hasil GridSearch, model XGBoost memiliki MAE terendah (1582.60), diikuti oleh LightGBM (1584.17) dan Gradient Boosting (1584.47). Model dengan MAE tertinggi adalah KNN (1672.47), yang berarti model ini memiliki performa paling buruk dibandingkan model lainnya. 
-
-XGBoost adalah model terbaik karena memiliki MAE terendah, yang berarti mampu menghasilkan prediksi harga mobil bekas dengan error paling kecil.
+- XGBoost → Model dengan MAE terendah (1582.60), menunjukkan performa baik dalam prediksi harga mobil bekas.
+  - Best Parameters: learning_rate=0.1, max_depth=7, n_estimators=500.
+- LightGBM → Performa hampir setara dengan XGBoost dengan MAE 1584.17, sedikit lebih tinggi namun tetap sangat kompetitif.
+  - Best Parameters: learning_rate=0.1, max_depth=15, n_estimators=500, num_leaves=50.
+- Gradient Boosting → MAE 1584.47, sangat mirip dengan LightGBM, tetapi biasanya lebih lambat dalam pelatihan dibanding LightGBM dan XGBoost.
+  - Best Parameters: learning_rate=0.1, max_depth=7, n_estimators=500.
+- Random Forest → Memiliki MAE lebih tinggi (1627.05) dibanding model boosting, tetapi tetap cukup kuat dalam prediksi.
+  - Best Parameters: max_depth=20, min_samples_leaf=1, min_samples_split=10, n_estimators=500.
+- KNN → Model dengan MAE tertinggi (1672.47), menunjukkan performa kurang optimal dibanding model lain.
+  - Best Parameters: metric='manhattan', n_neighbors=20, weights='distance'.
 
 ## Evaluation
 Evaluasi model dilakukan untuk menilai sejauh mana model machine learning yang telah dikembangkan mampu memprediksi harga mobil bekas dengan akurasi tinggi. Pada penelitian ini, digunakan empat metrik evaluasi utama, yaitu Mean Absolute Error (MAE), Mean Squared Error (MSE), Root Mean Squared Error (RMSE), dan R² Score (Coefficient of Determination).
