@@ -376,13 +376,14 @@ Tahapan yang dilakukan:
 Dengan GridSearchCV, setiap model diuji dengan berbagai kombinasi parameter untuk mencari konfigurasi yang menghasilkan error terkecil.
 
 Hasil GridSearch
-| Model             | MAE       |
-|-------------------|----------|
-| **XGBoost**      | **1582.60** |
-| LightGBM         | 1584.17  |
-| Gradient Boosting | 1584.47  |
-| Random Forest    | 1627.05  |
-| KNN              | 1672.47  |
+| **Model**            | **MAE**       | **Best Parameters**  |
+|----------------------|--------------|------------------------------------------------------------------|
+| **XGBoost**         | **1582.60**   | `learning_rate=0.1, max_depth=7, n_estimators=500`              |
+| **LightGBM**        | **1584.17**   | `learning_rate=0.1, max_depth=15, n_estimators=500, num_leaves=50` |
+| **Gradient Boosting** | **1584.47**  | `learning_rate=0.1, max_depth=7, n_estimators=500`              |
+| **Random Forest**   | **1627.05**   | `max_depth=20, min_samples_leaf=1, min_samples_split=10, n_estimators=500` |
+| **KNN**             | **1672.47**   | `metric='manhattan', n_neighbors=20, weights='distance'`        |
+
 
 Berdasarkan hasil GridSearch, model XGBoost memiliki MAE terendah (1582.60), diikuti oleh LightGBM (1584.17) dan Gradient Boosting (1584.47). Model dengan MAE tertinggi adalah KNN (1672.47), yang berarti model ini memiliki performa paling buruk dibandingkan model lainnya. 
 
